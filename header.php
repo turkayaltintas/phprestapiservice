@@ -5,7 +5,7 @@ include "config/core.php";
 $database = new Database();
 $db = $database->getConnection();
 $user = new user($db);
-$Session_eMail = $_SESSION['email'];
+@$Session_eMail = $_SESSION['email'];
 $userControl = $user->checkUser($Session_eMail);
 ?>
 <!DOCTYPE html>
@@ -53,7 +53,7 @@ $userControl = $user->checkUser($Session_eMail);
                         <li class="nav-item"><a class="nav-link" href="about.php"">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="service.php"">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.php"">Contact</a></li>
-                        <li class="nav-item"><a class="btn btn-primary ml-lg-2" href="" data-toggle="modal" data-target="#exampleModal">Logout</a></li>
+                        <li class="nav-item"><a class="btn btn-primary ml-lg-2" href="" onclick="userLogout();">Logout</a></li>
                     <?php }else{ ?>
                         <li class="nav-item"><a class="btn btn-primary ml-lg-2" href="" data-toggle="modal" data-target="#exampleModal">Login</a></li>
                         <li class="nav-item"><a class="btn btn-primary ml-lg-2" href="" data-toggle="modal" data-target="#exampleModal">Register</a></li>

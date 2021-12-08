@@ -82,7 +82,18 @@ function Login() {
         error: function (response) {
             console.log(response);
             __Alert('Hata', "Bir hata oluştu.", 'error');
-            $('#open-modal-module').modal('hide');
+        }
+    });
+}
+
+function userLogout(){
+    $.ajax({
+        url: "controller/logout.php",
+        type: "POST",
+        data: {p:"123"},
+        success: function (response) {
+            console.log(response);
+            location.reload(true);
         }
     });
 }
