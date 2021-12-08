@@ -28,7 +28,9 @@ if ($product->name != null) {
         "description" => $product->description,
         "price" => $product->price,
         "category_id" => $product->category_id,
-        "category_name" => $product->category_name
+        "category_name" => $product->category_name,
+        "created" => $product->created,
+        "modified" => $product->modified
     );
     http_response_code(200);
     echo json_encode($product_arr);

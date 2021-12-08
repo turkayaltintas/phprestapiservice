@@ -68,7 +68,7 @@ class Product{
 
     function readOne(){
         $query = "SELECT
-                c.name as category_name, p.id, p.name, p.description, p.price, p.category_id, p.created
+                c.name as category_name, p.id, p.name, p.description, p.price, p.category_id, p.created, p.modified
             FROM
                 " . $this->table_name . " p
                 LEFT JOIN
@@ -88,6 +88,8 @@ class Product{
         $this->description = $row['description'];
         $this->category_id = $row['category_id'];
         $this->category_name = $row['category_name'];
+        $this->created = $row['created'];
+        $this->modified = $row['modified'];
     }
 
     function update(){
