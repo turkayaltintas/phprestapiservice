@@ -2,10 +2,9 @@
     <div class="page-banner home-banner">
         <div class="row align-items-center flex-wrap-reverse h-100">
             <div class="col-md-6 py-5 wow fadeInLeft">
-                <h1 class="mb-4">Let's Check and Optimize your website!</h1>
-                <p class="text-lg text-grey mb-5">Ignite the most powerfull growth engine you have ever built for your
-                    company</p>
-                <a href="#" class="btn btn-primary btn-split">Watch Video
+                <h1 class="mb-4">Get Start PHP REST API</h1>
+                <p class="text-lg text-grey mb-5">How to use ?</p>
+                <a target="_blank" href="https://github.com/turkayaltintas/phprestapiservice" class="btn btn-primary btn-split">Go Github
                     <div class="fab"><span class="mai-play"></span></div>
                 </a>
             </div>
@@ -19,76 +18,12 @@
     </div>
 </div>
 
-<div class="page-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="card-service wow fadeInUp">
-                    <div class="header">
-                        <img src="../assets/img/services/service-1.svg" alt="">
-                    </div>
-                    <div class="body">
-                        <h5 class="text-secondary">SEO Consultancy</h5>
-                        <p>We help you define your SEO objective & develop a realistic strategy with you</p>
-                        <a href="service.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card-service wow fadeInUp">
-                    <div class="header">
-                        <img src="../assets/img/services/service-2.svg" alt="">
-                    </div>
-                    <div class="body">
-                        <h5 class="text-secondary">Content Marketing</h5>
-                        <p>We help you define your SEO objective & develop a realistic strategy with you</p>
-                        <a href="service.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card-service wow fadeInUp">
-                    <div class="header">
-                        <img src="../assets/img/services/service-3.svg" alt="">
-                    </div>
-                    <div class="body">
-                        <h5 class="text-secondary">Keyword Research</h5>
-                        <p>We help you define your SEO objective & develop a realistic strategy with you</p>
-                        <a href="service.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- .container -->
-</div> <!-- .page-section -->
-
-<div class="page-section" id="about">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 py-3 wow fadeInUp">
-                <span class="subhead">About us</span>
-                <h2 class="title-section">The number #1 SEO Service Company</h2>
-                <div class="divider"></div>
-
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
-                <a href="about.html" class="btn btn-primary mt-3">Read More</a>
-            </div>
-            <div class="col-lg-6 py-3 wow fadeInRight">
-                <div class="img-fluid py-3 text-center">
-                    <img src="../assets/img/about_frame.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div> <!-- .container -->
-</div> <!-- .page-section -->
 
 <div class="page-section bg-light">
     <div class="container">
         <div class="text-center wow fadeInUp">
-            <div class="subhead">Our services</div>
-            <h2 class="title-section">How SEO Team Can Help</h2>
+            <div class="subhead">REST API</div>
+            <h2 class="title-section">How Request API</h2>
             <div class="divider mx-auto"></div>
         </div>
 

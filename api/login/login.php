@@ -15,19 +15,28 @@ $db = $database->getConnection();
 $login = new Login($db);
 
 if(!empty($data->email) && !empty($data->password)){
+    $login_arr = array();
+    $login_arr["data"] = array();
+
     $login->email = $data->email;
     $login->password = $data->password;
     $login->readOne();
 
     if ($login->count > 0 AND $login->token != null) {
-        http_response_code(201);
-        echo json_encode(array("token" => $login->token));
+        http_response_code(200);
+        $login_item = array(
+            "email" => $login->email,
+            "token" => $login->token
+        );
+        array_push($login_arr["data"], $login_item);
+//        echo json_encode(array("token" => $login->token));
+        echo json_encode($login_arr);
     }else {
-        http_response_code(503);
+        http_response_code(404);
         echo json_encode(array("message" => "User not found."));
     }
 }else{
     http_response_code(404);
-    echo json_encode(array("message" => "Pls, POST Request"));
+    echo json_encode(array("message" => "E-Mail and Password is not nul"));
 }
 ?>

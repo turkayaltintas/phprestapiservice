@@ -43,9 +43,11 @@ class Login{
 
         if($stmt->rowCount() > 0){
             $Token = $this->generateToken($this->email);
+            $this->email;
             $this->token = $Token;
             $this->count = 1;
         }else{
+            $this->email = null;
             $this->token = null;
             $this->count = 0;
         }
@@ -67,6 +69,9 @@ class Login{
         $stmt->bindParam(':token', $token);
         $stmt->bindParam(':token_expire', $tokentime);
         $stmt->execute();
+        $this->userSession("start");
+        $this->addSession("email",$email);
+        $this->addSession("token",$token);
         return $token;
     }
 
@@ -91,7 +96,17 @@ class Login{
             echo json_encode(array("message" => "Token expire"));
             die();
         }
+    }
 
+    public function userSession($data){
+        if($data == "start"){
+            session_start();
+        }elseif($data == "stop"){
+            session_destroy();
+        }
+    }
+    public function addSession($name,$value){
+        $_SESSION["$name"] = $value;
     }
 
 }

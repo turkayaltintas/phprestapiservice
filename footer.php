@@ -4,15 +4,13 @@
     <div class="container">
         <div class="row mb-5">
             <div class="col-lg-3 py-3">
-                <h3>SEOGram</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet, repellendus eius blanditiis in iusto eligendi iure.</p>
+                <h3>TurkAy</h3>
+                <p>Hi, My name is Türkay ALTINTAŞ</p>
 
                 <div class="social-media-button">
-                    <a href="#"><span class="mai-logo-facebook-f"></span></a>
-                    <a href="#"><span class="mai-logo-twitter"></span></a>
-                    <a href="#"><span class="mai-logo-google-plus-g"></span></a>
-                    <a href="#"><span class="mai-logo-instagram"></span></a>
-                    <a href="#"><span class="mai-logo-youtube"></span></a>
+                    <a href="https://www.facebook.com/istanbulgopcity2/" target="_blank"><span class="mai-logo-facebook-f"></span></a>
+                    <a href="https://www.instagram.com/turkayaltintas" target="_blank"><span class="mai-logo-instagram"></span></a>
+                    <a href="https://www.youtube.com/channel/UCrd61slztXw5Td7hhfdc1Ig" target="_blank"><span class="mai-logo-youtube"></span></a>
                 </div>
             </div>
             <div class="col-lg-3 py-3">

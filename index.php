@@ -4,6 +4,9 @@
 
 <?php include "footer.php"; ?>
 
+<script>
+    
+</script>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -32,7 +35,7 @@
 
                     <div class="row form-group mt-4">
                         <div class="col-md-12">
-                            <input type="submit" value="Login" class="btn btn-primary">
+                            <input type="button" value="Login" onclick="Login();" class="btn btn-primary">
                         </div>
                     </div>
                 </form>
