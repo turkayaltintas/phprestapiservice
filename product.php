@@ -4,26 +4,25 @@
     <div class="container">
       <div class="row text-center align-items-center">
         <div class="col-lg-4 py-3">
-            <form action="#" class="contact-form py-5 px-lg-5">
+            <form id="createproduct" class="contact-form py-5 px-lg-5">
                 <h2 class="mb-4 font-weight-medium text-secondary">Create</h2>
-
                 <div class="row form-group">
                     <div class="col-md-12">
                         <label class="text-black" for="email">Product Name</label>
-                        <input type="email" id="name" name="name" class="form-control">
+                        <input type="text" id="productname" name="productname" class="form-control">
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-md-12">
                         <label class="text-black" for="email">Price</label>
-                        <input type="email" id="price" name="price" class="form-control">
+                        <input type="text" id="price" name="price" class="form-control">
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-md-12">
                         <label class="text-black" for="subject">Category</label>
-                        <select name="category_id" class="form-control">
-                            <option value="">Name</option>
+                        <select name="category_id" id="category_id" class="form-control">
+                            <option value="12">Name</option>
                         </select>
                     </div>
                 </div>
@@ -33,9 +32,10 @@
                         <textarea name="description" id="description" cols="30" rows="5" class="form-control"></textarea>
                     </div>
                 </div>
+                <input hidden name="token" id="token" value="<?php echo $_SESSION['token']; ?>">
                 <div class="row form-group mt-4">
                     <div class="col-md-12">
-                        <input type="button" value="Create Product" class="btn btn-primary">
+                        <button type="button" class="btn btn-primary" onclick="createProject();">Create Product</button>
                     </div>
                 </div>
             </form>

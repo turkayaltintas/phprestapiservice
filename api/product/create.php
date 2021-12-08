@@ -23,13 +23,12 @@ $login->tokenControle($data->token);
 if (
     !empty($data->name) &&
     !empty($data->price) &&
-    !empty($data->description) &&
     !empty($data->category_id)
 ) {
 
     $product->name = $data->name;
     $product->price = $data->price;
-    $product->description = $data->description;
+    $product->description = html_entity_decode($data->description);
     $product->category_id = $data->category_id;
     $product->created = date('Y-m-d H:i:s');
 

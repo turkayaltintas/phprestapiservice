@@ -55,6 +55,10 @@ function ShowModuleModal(modulName = null, method = "show", title = null, thisi,
 
 }
 
+function getToken() {
+
+}
+
 function Login() {
     // var data = $('#loginForm').serialize();
     var password = $('#loginForm #password').val();
@@ -119,4 +123,39 @@ function __AlertTimer() {
             clearInterval(timerInterval)
         }
     })
+}
+
+function createProject() {
+    // var data = $('#createproduct').serialize();
+    var productname = $('#createproduct #productname').val();
+    var price = $('#createproduct #price').val();
+    var category_id = $('#createproduct #category_id').val();
+    var description = $('#createproduct #description').val();
+    var token = $('#createproduct #token').val();
+    var data = {
+        name: productname,
+        price: price,
+        category_id: category_id,
+        description: description,
+        token: token
+    };
+    $.ajax({
+        url: "api/product/create.php",
+        type: "POST",
+        dataType: "json",
+        data: JSON.stringify(data),
+        headers: {
+            "content-type": "application/json;charset=UTF-8"
+        },
+        beforeSend: function (response) {
+            console.log(data);
+        },
+        success: function (response) {
+            location.reload(true);
+        },
+        error: function (response) {
+            console.log(response);
+            __Alert('Hata', "Bir hata oluştu.", 'error');
+        }
+    });
 }
