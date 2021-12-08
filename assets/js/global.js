@@ -159,3 +159,40 @@ function createProject() {
         }
     });
 }
+
+function updateProject() {
+    // var data = $('#createproduct').serialize();
+    var productname = $('#updateproduct #productname').val();
+    var price       = $('#updateproduct #price').val();
+    var category_id = $('#updateproduct #category_id').val();
+    var description = $('#updateproduct #description').val();
+    var token       = $('#updateproduct #token').val();
+    var id          = $('#updateproduct #product_id').val();
+    var data = {
+        name: productname,
+        price: price,
+        category_id: category_id,
+        description: description,
+        token: token,
+        id: id
+    };
+    $.ajax({
+        url: "api/product/update.php",
+        type: "POST",
+        dataType: "json",
+        data: JSON.stringify(data),
+        headers: {
+            "content-type": "application/json;charset=UTF-8"
+        },
+        beforeSend: function (response) {
+            console.log(data);
+        },
+        success: function (response) {
+            location.reload(true);
+        },
+        error: function (response) {
+            console.log(response);
+            __Alert('Hata', "Bir hata oluştu.", 'error');
+        }
+    });
+}

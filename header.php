@@ -50,10 +50,10 @@ $userControl = $user->checkUser($Session_eMail);
                     <?php if($userControl == 1){ ?>
                         <li class="nav-item"><a class="nav-link" href="productlist.php"">Product List</a></li>
                         <li class="nav-item"><a class="nav-link" href="product.php"">Product</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.php"">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="service.php"">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.php"">Contact</a></li>
-                        <li class="nav-item"><a class="btn btn-primary ml-lg-2" href="" onclick="userLogout();">Logout</a></li>
+                        <li hidden class="nav-item"><a class="nav-link" href="about.php"">About</a></li>
+                        <li hidden class="nav-item"><a class="nav-link" href="service.php"">Services</a></li>
+                        <li hidden class="nav-item"><a class="nav-link" href="contact.php"">Contact</a></li>
+                        <li  class="nav-item"><a class="btn btn-primary ml-lg-2" href="" onclick="userLogout();">Logout</a></li>
                     <?php }else{ ?>
                         <li class="nav-item"><a class="btn btn-primary ml-lg-2" href="" data-toggle="modal" data-target="#exampleModal">Login</a></li>
                         <li class="nav-item"><a class="btn btn-primary ml-lg-2" href="" data-toggle="modal" data-target="#exampleModal">Register</a></li>
