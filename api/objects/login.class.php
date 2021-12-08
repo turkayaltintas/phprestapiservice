@@ -53,8 +53,8 @@ class Login{
 
     function generateToken($email){
         $tokentime	= date("Y-m-d- H:i:s", strtotime("+30minutes"));
-        $tokenstring = rand().time();
-        $token = (uniqid($tokenstring, true));
+        $tokenstring = rand().rand() ;
+        $token = md5(uniqid($tokenstring, true));
         $this->token = $token;
         $query = "UPDATE
                 " . $this->table_name . "
