@@ -57,4 +57,27 @@ function ShowModuleModal(modulName = null, method = "show", title = null, thisi,
 }
 
 
+function Login(){
+    $.ajax({
+        url:_url,
+        method: 'GET',
+        beforeSend: function (response) {
+            LoadingWidget(1);
+        },
+        success: function(response) {
+            LoadingWidget(2);
+            $('#modalinclude').html('');
+            $('#open-modal-module #modal-header').html('<h4 class="modal-title">'+ title +'</h4>' + ModalCloseButton);
+            $('#modalinclude').html(response);
+        },
+        error: function(response) {
+            console.log(response);
+            __Alert('Hata', "Bir hata oluştu. #MDL0002", 'error');
+            $('#open-modal-module').modal('hide');
+        }
+    });
+}
 
+function __Alert(title = 'Bildirim', body, icon = 'info') {
+    Swal.fire(title, body, icon);
+}
