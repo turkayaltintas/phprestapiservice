@@ -48,7 +48,7 @@ $userControl = $user->checkUser($Session_eMail);
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <?php if($userControl == 1){ ?>
-                        <li class="nav-item"><a class="nav-link" href="blog.php"">Product List</a></li>
+                        <li class="nav-item"><a class="nav-link" href="productlist.php"">Product List</a></li>
                         <li class="nav-item"><a class="nav-link" href="product.php"">Product</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.php"">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="service.php"">Services</a></li>

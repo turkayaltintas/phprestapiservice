@@ -28,9 +28,9 @@ if ($num > 0) {
 
         $product_item = array(
             "id" => $id,
-            "name" => $name,
+            "product_name" => $name,
             "description" => html_entity_decode($description),
-            "price" => $price,
+            "price" => number_format($price, 2, ',', '.'),
             "category_id" => $category_id,
             "category_name" => $category_name
         );
