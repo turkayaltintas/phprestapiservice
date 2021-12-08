@@ -40,8 +40,8 @@
         </div>
 
         <nav aria-label="Page Navigation">
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
+            <ul class="pagination justify-content-center" id="pageListsItem">
+                <li hidden class="page-item disabled">
                     <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
                 </li>
                 <li hidden class="page-item"><a class="page-link" href="#">1</a></li>
@@ -49,8 +49,8 @@
                     <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
                 </li>
                 <li hidden class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
+                <li class="page-item" id="lastPage">
+
                 </li>
             </ul>
         </nav>
@@ -61,35 +61,49 @@
 <?php include "footer.php"; ?>
 
 
+<?php
+    $ThisPage = 1;
+    if(isset($_GET['page'])){
+        $ThisPage = $_GET['page'];
+    }else{
+        $ThisPage = 1;
+    }
+?>
 <script>
     $(document).ready(function () {
         readListProducts();
     });
 
     function readListProducts() {
-        let Categorys = $("#productlists");
-        let token = "27cffdc4fefa434bc26a3c33d08c883c";
+        let ProductsList = $("#productlists");
+        let lastPage = $("#lastPage");
+        let pageListsItem = $("#pageListsItem");
+        let token = "<?php echo $_SESSION['token']; ?>";
 
         $.ajax({
             url: "api/product/read_paging.php",
             type: "GET",
-            dataType: "json",
             data:{
-                page:"1",
+                page:"<?php echo $ThisPage;  ?>",
                 token:token,
             },
             beforeSend: function (response) {
-                console.log(response);
+
             },
             success: function (response) {
                 $.each(response.records, function (rd, rowData) {
-                    Categorys.append('<div class="col-lg-4 py-3 text-center"><div class="card-blog"><div class="body text-center"><h5 class="post-title"><a href="/">' + rowData.product_name +'</a></h5><div class="post-date">'+rowData.category_name+' <br> <br><a href="">'+rowData.price+' TL</a></div></div></div></div>');
+                    ProductsList.append('<div class="col-lg-4 py-3 text-center"><div class="card-blog"><div class="body text-center"><h5 class="post-title"><a href="product-details.php?id='+rowData.id+'">' + rowData.product_name +'</a></h5><div class="post-date">'+rowData.category_name+' <br> <br><a href="product-details.php?id='+rowData.id+'">'+rowData.price+' TL</a></div></div></div></div>');
+                });
+                $.each(response, function( key, val ) {
+                    $.each(val.pages, function( keyy, vall ) {
+                        pageListsItem.append('<li class="page-item"><a class="page-link" href="?page=' + vall.page + '">' + vall.page + '</a></li>');
+                    });
                 });
 
             },
             error: function (response) {
                 console.log(response);
-                __Alert('Hata', "Category not working...", 'error');
+                __Alert('Hata', "Product working...", 'error');
             }
         });
     }
