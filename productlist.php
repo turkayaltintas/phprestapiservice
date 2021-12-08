@@ -3,7 +3,7 @@
 <div class="page-section">
     <div class="container">
         <div class="row">
-            <div class="col-sm-10">
+            <div hidden class="col-sm-10">
                 <form action="#" class="form-search-blog">
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -19,7 +19,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-sm-2 text-sm-right">
+            <div hidden class="col-sm-2 text-sm-right">
                 <button class="btn btn-secondary">Filter <span class="mai-filter"></span></button>
             </div>
         </div>

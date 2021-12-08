@@ -13,7 +13,7 @@
                     <a href="https://www.youtube.com/channel/UCrd61slztXw5Td7hhfdc1Ig" target="_blank"><span class="mai-logo-youtube"></span></a>
                 </div>
             </div>
-            <div class="col-lg-3 py-3">
+            <div hidden class="col-lg-3 py-3">
                 <h5>Company</h5>
                 <ul class="footer-menu">
                     <li><a href="#">About Us</a></li>
@@ -23,13 +23,13 @@
                     <li><a href="#">Help & Support</a></li>
                 </ul>
             </div>
-            <div class="col-lg-3 py-3">
+            <div hidden class="col-lg-3 py-3">
                 <h5>Contact Us</h5>
                 <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
                 <a href="#" class="footer-link">+00 1122 3344 5566</a>
                 <a href="#" class="footer-link">seogram@temporary.com</a>
             </div>
-            <div class="col-lg-3 py-3">
+            <div hidden class="col-lg-3 py-3">
                 <h5>Newsletter</h5>
                 <p>Get updates, news or events on your mail.</p>
                 <form action="#">
@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <p class="text-center" id="copyright">Copyright &copy; 2020. This template design and develop by <a href="https://macodeid.com/" target="_blank">MACode ID</a></p>
+        <p class="text-center" id="copyright">Copyright &copy; 2021. This template design and develop by <a href="https://macodeid.com/" target="_blank">MACode ID</a> - TurkoSoft & Turkay Altintas</p>
     </div>
 </footer>
 
