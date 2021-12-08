@@ -21,9 +21,7 @@
                 <div class="row form-group">
                     <div class="col-md-12">
                         <label class="text-black" for="subject">Category</label>
-                        <select name="category_id" id="category_id" class="form-control">
-                            <option value="12">Name</option>
-                        </select>
+                        <select name="category_id" id="category_id" class="form-control"></select>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -52,3 +50,32 @@
   </div>
 
 <?php include "footer.php"; ?>
+
+<script>
+    $(document).ready(function() {
+        readListCategory();
+    });
+    function readListCategory() {
+        var Categorys = $("#category_id");
+        $.ajax({
+            url: "api/category/read.php",
+            type: "GET",
+            dataType: "json",
+            beforeSend: function (response) {
+                console.log(response);
+            },
+            success: function (response) {
+                $.each(response.records, function (rd, rowData) {
+                    Categorys.append("<option value='" + rowData.id + "'> " + rowData.name +"</option>");
+                });
+            },
+            error: function (response) {
+                console.log(response);
+                __Alert('Hata', "Category not working...", 'error');
+            }
+        });
+    }
+
+    $("#Type").html('');
+
+</script>
