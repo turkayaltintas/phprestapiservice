@@ -105,6 +105,7 @@ class Login{
             session_destroy();
         }
     }
+
     public function addSession($name,$value){
         $_SESSION["$name"] = $value;
     }
