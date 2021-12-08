@@ -5,8 +5,10 @@ header("Access-Control-Allow-Methods: GET");
 header("Access-Control-Allow-Credentials: true");
 header('Content-Type: application/json');
 
-include_once '../config/database.php';
 include_once '../objects/allClass.php';
+
+$methods = new methods();
+print_r($methods->methodControl("GET"));
 
 $database = new Database();
 $db = $database->getConnection();
