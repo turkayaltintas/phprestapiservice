@@ -33,8 +33,8 @@
                     <div class="header mb-3">
                         <span class="mai-business"></span>
                     </div>
-                    <h5>OnSite SEO</h5>
-                    <p>We analyse your website's structure, internal architecture & other key</p>
+                    <h5>Product Read</h5>
+                    <p>All product list</p>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
@@ -42,8 +42,8 @@
                     <div class="header mb-3">
                         <span class="mai-business"></span>
                     </div>
-                    <h5>OnSite SEO</h5>
-                    <p>We analyse your website's structure, internal architecture & other key</p>
+                    <h5>Product Read One</h5>
+                    <p>Selected one list</p>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
@@ -51,8 +51,8 @@
                     <div class="header mb-3">
                         <span class="mai-business"></span>
                     </div>
-                    <h5>OnSite SEO</h5>
-                    <p>We analyse your website's structure, internal architecture & other key</p>
+                    <h5>Product Read Paging</h5>
+                    <p>View product</p>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
@@ -60,8 +60,8 @@
                     <div class="header mb-3">
                         <span class="mai-business"></span>
                     </div>
-                    <h5>OnSite SEO</h5>
-                    <p>We analyse your website's structure, internal architecture & other key</p>
+                    <h5>Product Search Paging</h5>
+                    <p>Search product name</p>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
@@ -69,8 +69,8 @@
                     <div class="header mb-3">
                         <span class="mai-business"></span>
                     </div>
-                    <h5>OnSite SEO</h5>
-                    <p>We analyse your website's structure, internal architecture & other key</p>
+                    <h5>Product Create</h5>
+                    <p>Created new product</p>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
@@ -78,8 +78,8 @@
                     <div class="header mb-3">
                         <span class="mai-business"></span>
                     </div>
-                    <h5>OnSite SEO</h5>
-                    <p>We analyse your website's structure, internal architecture & other key</p>
+                    <h5>Product Delete</h5>
+                    <p>Delete product :)</p>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
@@ -87,8 +87,8 @@
                     <div class="header mb-3">
                         <span class="mai-business"></span>
                     </div>
-                    <h5>OnSite SEO</h5>
-                    <p>We analyse your website's structure, internal architecture & other key</p>
+                    <h5>Product Update</h5>
+                    <p>Fast update</p>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 col-xl-3 py-3 wow zoomIn">
@@ -96,8 +96,8 @@
                     <div class="header mb-3">
                         <span class="mai-business"></span>
                     </div>
-                    <h5>OnSite SEO</h5>
-                    <p>We analyse your website's structure, internal architecture & other key</p>
+                    <h5>Category Read</h5>
+                    <p>List category</p>
                 </div>
             </div>
         </div>
@@ -105,7 +105,7 @@
     </div> <!-- .container -->
 </div> <!-- .page-section -->
 
-<div class="page-section banner-seo-check">
+<div hidden class="page-section banner-seo-check">
     <div class="wrap bg-image" style="background-image: url(../assets/img/bg_pattern.svg);">
         <div class="container text-center">
             <div class="row justify-content-center wow fadeInUp">
@@ -121,7 +121,7 @@
     </div> <!-- .wrap -->
 </div> <!-- .page-section -->
 
-<div class="page-section">
+<div hidden class="page-section">
     <div class="container">
         <div class="text-center wow fadeInUp">
             <div class="subhead">Pricing Plan</div>
@@ -203,7 +203,7 @@
 </div> <!-- .page-section -->
 
 <!-- Banner info -->
-<div class="page-section banner-info">
+<div hidden class="page-section banner-info">
     <div class="wrap bg-image" style="background-image: url(../assets/img/bg_pattern.svg);">
         <div class="container">
             <div class="row align-items-center">
@@ -237,7 +237,7 @@
 </div> <!-- .page-section -->
 
 <!-- Blog -->
-<div class="page-section">
+<div hidden class="page-section">
     <div class="container">
         <div class="text-center wow fadeInUp">
             <div class="subhead">Our Blog</div>
