@@ -69,6 +69,16 @@ https://prnt.sc/22cgllt
         "password" : "1234"
     }
 ```
+## Register
+###### /api/login/register.php
+###### Body -> Row - JSON
+https://prnt.sc/22cgllt
+```
+    {
+        "email" : "turkay@turkayaltintas.com",
+        "password" : "1234"
+    }
+```
 
 ## Product Read
 ###### /api/product/read.php?token=1369e483c05d3cadea65a50ff0c2c920
