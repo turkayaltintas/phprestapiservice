@@ -43,3 +43,39 @@
         </div>
     </div>
 </div>
+<!-- Register - Modal -->
+<div class="modal fade" id="RegisterExampleModal" tabindex="-1" aria-labelledby="RegisterExampleModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="RegisterExampleModal">Register</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm" action="#" class="contact-form py-5 px-lg-5">
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="text-black" for="email">Email</label>
+                            <input type="email" name="email" id="email" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="text-black" for="subject">Password</label>
+                            <input type="password" name="password" id="password" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row form-group mt-4">
+                        <div class="col-md-12">
+                            <input type="button" value="Register" onclick="Register();" class="btn btn-primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -82,10 +82,39 @@ function Login() {
             // localStorage['token'] = JSON.stringify(response.data[0]['token']);
             // localStorage['email'] = JSON.stringify(response.data[0]['email']);
             location.reload(true);
+            $('#RegisterExampleModal').modal('hide');
         },
         error: function (response) {
             console.log(response);
             __Alert('Hata', "Bir hata oluştu.", 'error');
+        }
+    });
+}
+
+function Register() {
+    // var data = $('#loginForm').serialize();
+    var password = $('#registerForm #password').val();
+    var email = $('#registerForm #email').val()
+    var data = {
+        password: password,
+        email: email,
+    };
+    $.ajax({
+        url: "api/login/register.php",
+        type: "PUT",
+        dataType: "json",
+        data: JSON.stringify(data),
+        headers: {
+            "content-type": "application/json;charset=UTF-8"
+        },
+        beforeSend: function (response) {
+        },
+        success: function (response) {
+            __Alert('Başarılı', "İşlem başarılı olmuştur.", 'info');
+        },
+        error: function (response) {
+            // let message = JSON.stringify(response.responseJSON['message']);
+            __Alert('Error', "Danger!", 'error');
         }
     });
 }
@@ -195,4 +224,8 @@ function updateProject() {
             __Alert('Hata', "Bir hata oluştu.", 'error');
         }
     });
+}
+
+function reloadSetTimeOut(time = 2000){
+    setTimeout(location.reload(true), time);
 }

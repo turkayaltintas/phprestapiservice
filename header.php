@@ -56,7 +56,7 @@ $userControl = $user->checkUser($Session_eMail);
                         <li  class="nav-item"><a class="btn btn-primary ml-lg-2" href="" onclick="userLogout();">Logout</a></li>
                     <?php }else{ ?>
                         <li class="nav-item"><a class="btn btn-primary ml-lg-2" href="" data-toggle="modal" data-target="#exampleModal">Login</a></li>
-                        <li class="nav-item"><a class="btn btn-primary ml-lg-2" href="" data-toggle="modal" data-target="#exampleModal">Register</a></li>
+                        <li class="nav-item"><a class="btn btn-primary ml-lg-2" href="" data-toggle="modal" data-target="#RegisterExampleModal">Register</a></li>
                     <?php } ?>
                 </ul>
             </div>

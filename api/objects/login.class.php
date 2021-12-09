@@ -26,6 +26,33 @@ class Login{
         return $row['total_rows'];
     }
 
+    public function checkUser(){
+        $query = "SELECT email FROM " . $this->table_name . " WHERE email=:email ";
+        $countUser = $this->conn->prepare($query);
+        $countUser->bindParam(':email', $this->email);
+        $countUser->execute();
+        if($countUser->rowCount() > 0){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    public function Register(){
+        # Check User Control
+        if ($this->checkUser()){
+            $query = "INSERT INTO " . $this->table_name . " SET email=:email, password=:password";
+            $stmt = $this->conn->prepare($query);
+            $this->email = htmlspecialchars(strip_tags($this->email));
+            $this->password = htmlspecialchars(strip_tags($this->password));
+            $stmt->bindParam(":email", $this->email);
+            $stmt->bindParam(":password", $this->password);
+            $stmt->execute();
+            return true;
+        }
+        return false;
+    }
+
     function readOne(){
         $query = "
             SELECT id,email,password,token,token_expire
