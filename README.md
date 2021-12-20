@@ -159,3 +159,12 @@ https://prnt.sc/22chui0
 ```
     token : 1369e483c05d3cadea65a50ff0c2c920
 ```
+
+
+## Upload Image
+###### /api/product/image.php
+https://prnt.sc/23pp1ak
+```
+    token : 1369e483c05d3cadea65a50ff0c2c920
+    file  : 
+```
