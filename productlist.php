@@ -92,7 +92,7 @@
             },
             success: function (response) {
                 $.each(response.records, function (rd, rowData) {
-                    ProductsList.append('<div class="col-lg-4 py-3 text-center"><div class="card-blog"><div class="body text-center"><h5 class="post-title"><a href="product-details.php?id='+rowData.id+'">' + rowData.product_name +'</a></h5><div class="post-date">'+rowData.category_name+' <br> <br><a href="product-details.php?id='+rowData.id+'">'+rowData.price+' TL</a></div></div></div></div>');
+                    ProductsList.append('<div class="col-lg-4 py-3 text-center"><div class="card-blog"><div class="body text-center"><h5 class="post-title"><a href="product-details.php?id='+rowData.id+'">' + rowData.product_name +'</a></h5><div class="post-date">'+rowData.category_name+' <br> <br><a href="product-details.php?id='+rowData.id+'">'+rowData.price+' TL</a> <br><br><a href="#" class="btn btn-primary btn-sm text-light" onclick="addToCart(this);" product-id="'+rowData.id+'">Add To Cart</a></div></div></div></div>');
                 });
                 $.each(response, function( key, val ) {
                     $.each(val.pages, function( keyy, vall ) {
@@ -107,4 +107,26 @@
             }
         });
     }
+
+    function addToCart(thise){
+        __Alert('Success', "Product added to cart...", 'success');
+        let productId = $(thise).attr("product-id");
+        let token = "<?php echo $_SESSION['token']; ?>";
+        $.ajax({
+            url: "api/cart/add.php",
+            type: "POST",
+            data:{
+                product_id:productId,
+                token:token,
+            },
+            success: function (response) {
+                __Alert('Success', "Product added to cart...", 'success');
+            },
+            error: function (response) {
+                console.log(response);
+                __Alert('Error', "Product working...", 'error');
+            }
+        });
+    }
+
 </script>
